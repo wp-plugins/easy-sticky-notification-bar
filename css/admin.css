@@ -1,0 +1,159 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Clearings
+2.0 - Admin Wrapper
+3.0 - Forms
+4.0 - Easytabs
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Clearings
+--------------------------------------------------------------*/
+.do-esnb-admin-wrapper:before,
+.do-esnb-admin-wrapper:after,
+.do-esnb-info:before,
+.do-esnb-info:after,
+.do-esnb-info-inside:before,
+.do-esnb-info-inside:after {
+  content: '';
+  display: table;
+}
+.do-esnb-admin-wrapper:after,
+.do-esnb-info:after,
+.do-esnb-info-inside:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+2.0 - Admin Wrapper
+--------------------------------------------------------------*/
+.do-esnb-admin-wrapper {
+	margin: 10px 0;
+	width: 98%;
+}
+
+.do-esnb-header {
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	border-bottom: none;
+	margin: 25px 0 0;
+}
+.do-esnb-header-inside {
+	padding: 25px;
+}
+.do-esnb-header h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.do-esnb-info {
+	background: #f9f9f9;
+	border: 1px solid #e1e1e1;
+	margin: 0 0 25px;
+}
+.do-esnb-info-inside {
+	padding: 25px;
+}
+.do-esnb-info ul {
+	list-style: none;
+	margin: 0;
+	padding: 00;
+}
+.do-esnb-info ul li {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+div.updated {
+	margin: 25px 0 0 0;
+}
+
+/*--------------------------------------------------------------
+3.0 - Forms
+--------------------------------------------------------------*/
+.do-esnb-form-wrapper {
+	margin: 0;
+	padding: 0;
+}
+.do-esnb-form-wrapper input[type="text"] {
+	width: 80%;
+}
+.do-esnb-form-wrapper select {
+	width: 25%;
+}
+.do-esnb-form-header {
+	background: #f9f9f9;
+	border: 1px solid #e1e1e1;
+	border-bottom: none;
+	margin: 0;
+	text-align: right;
+}
+.do-esnb-form-header-inside {
+	padding: 25px;
+}
+.do-esnb-form-footer {
+	background: #f9f9f9;
+	border: 1px solid #e1e1e1;
+	border-top: none;
+	margin: 0 0 25px;
+	text-align: right;
+}
+.do-esnb-form-footer-inside {
+	padding: 25px;
+}
+
+/*--------------------------------------------------------------
+4.0 - Easytabs
+--------------------------------------------------------------*/
+.do-esnb-tabs-container:before,
+.do-esnb-tabs-container:after {
+  content: '';
+  display: table;
+}
+.do-esnb-tabs-container:after,
+.panel-container:after {
+  clear: both;
+}
+.do-esnb-tabs-container {
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	min-height: 450px;
+}
+
+.do-esnb-tabs-container .panel-container {
+	background: #fff;
+	float: left;
+	width: 82%;
+}
+
+.do-esnb-tabs-container ul {
+	background: #f9f9f9;
+	border-right: 1px solid #e1e1e1;
+	display: block;
+	float: left;
+	min-height: 450px;
+	width: 15%;
+	list-style: none;
+	margin: 0 25px 0 0;
+	padding: 0;
+}
+.do-esnb-tabs-container ul li {
+	border-bottom: 1px solid #e1e1e1;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.do-esnb-tabs-container ul li.active {
+	background: #fff;
+	left: 1px;
+	position: relative;
+}
+.do-esnb-tabs-container ul li a,
+.do-esnb-tabs-container ul li a:visited {
+	color: #222;
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;	
+	outline: none;
+}
