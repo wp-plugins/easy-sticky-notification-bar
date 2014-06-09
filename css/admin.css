@@ -118,7 +118,7 @@ div.updated {
 .do-esnb-tabs-container {
 	background: #fff;
 	border: 1px solid #e1e1e1;
-	min-height: 300px;
+	min-height: 450px;
 }
 
 .do-esnb-tabs-container .panel-container {
@@ -132,7 +132,7 @@ div.updated {
 	border-right: 1px solid #e1e1e1;
 	display: block;
 	float: left;
-	min-height: 300px;
+	min-height: 450px;
 	width: 15%;
 	list-style: none;
 	margin: 0 25px 0 0;

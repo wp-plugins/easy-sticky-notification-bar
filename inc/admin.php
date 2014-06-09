@@ -104,11 +104,14 @@ function do_esnb_settings() {
 	/** Config Section */
 	add_settings_section( 'do_esnb_section_config', __( 'Configuration', 'do-esnb' ), 'do_esnb_section_config_cb', 'do_esnb_section_config_page' );			
 	add_settings_field( 'do_esnb_field_enable', __( 'Enable', 'do-esnb' ), 'do_esnb_field_enable_cb', 'do_esnb_section_config_page', 'do_esnb_section_config' );
+	add_settings_field( 'do_esnb_field_button_display', __( 'Display Button', 'do-esnb' ), 'do_esnb_field_display_button_cb', 'do_esnb_section_config_page', 'do_esnb_section_config' );
 	
 	/** Content Section */
 	add_settings_section( 'do_esnb_section_content', __( 'Notification Content', 'do-esnb' ), 'do_esnb_section_content_cb', 'do_esnb_section_content_page' );			
 	add_settings_field( 'do_esnb_field_notification', __( 'Notification', 'do-esnb' ), 'do_esnb_field_notification_cb', 'do_esnb_section_content_page', 'do_esnb_section_content' );
 	add_settings_field( 'do_esnb_field_notification_link', __( 'Notification Link', 'do-esnb' ), 'do_esnb_field_notification_link_cb', 'do_esnb_section_content_page', 'do_esnb_section_content' );
+	add_settings_field( 'do_esnb_field_button_label', __( 'Button Label', 'do-esnb' ), 'do_esnb_field_button_label_cb', 'do_esnb_section_content_page', 'do_esnb_section_content' );
+	add_settings_field( 'do_esnb_field_button_link', __( 'Button Link', 'do-esnb' ), 'do_esnb_field_button_link_cb', 'do_esnb_section_content_page', 'do_esnb_section_content' );
 
 }
 add_action( 'admin_init', 'do_esnb_settings' );
@@ -132,6 +135,11 @@ function do_esnb_options_validate( $input ) {
 		 $input['enable'] = do_esnb_option_default( 'enable' );
 	}
 	
+	// Display Button
+	if ( ! array_key_exists( $input['display_button'], do_esnb_boolean() ) ) {
+		 $input['display_button'] = do_esnb_option_default( 'display_button' );
+	}
+	
 	// Notification
 	$input['notification'] = wp_kses( stripslashes( $input['notification'] ), array() );
 	
@@ -140,6 +148,16 @@ function do_esnb_options_validate( $input ) {
 		$input['notification_link'] = esc_url_raw( $input['notification_link'] );
 	} else {
 		$input['notification_link'] = '';
+	}
+	
+	// Button Label
+	$input['button_label'] = wp_kses( stripslashes( $input['button_label'] ), array() );
+	
+	// Button Link
+	if( filter_var( $input['button_link'], FILTER_VALIDATE_URL ) ) {
+		$input['button_link'] = esc_url_raw( $input['button_link'] );
+	} else {
+		$input['button_link'] = '';
 	}
 	
 	// return validated array
@@ -172,6 +190,22 @@ function  do_esnb_field_enable_cb() {
 
 }
 
+/* Display Button */		
+function  do_esnb_field_display_button_cb() {
+	
+	$items = do_esnb_boolean();
+	
+	echo '<select id="enable" name="do_esnb_options[display_button]">';
+	foreach( $items as $key => $val ) {
+	?>
+    <option value="<?php echo esc_attr( $key ); ?>" <?php selected( $key, do_esnb_option( 'display_button' ) ); ?>><?php echo esc_html( $val ); ?></option>
+    <?php
+	}
+	echo '</select>';
+	echo '<div><code>'. __( 'Select yes to display button', 'do-esnb' ) .'</code></div>';
+
+}
+
 /**
  * Content Section Callback
  */
@@ -198,5 +232,25 @@ function do_esnb_field_notification_link_cb() {
 	
 	echo '<input type="text" id="notification_link" name="do_esnb_options[notification_link]" value="'. esc_attr( do_esnb_option( 'notification_link' ) ) .'" />';			
 	echo '<div><code>'. __( 'Enter your notification link.', 'do-esnb' ) .'</code></div>';
+
+}
+
+/**
+ * Button Label Callback
+ */		
+function do_esnb_field_button_label_cb() {
+	
+	echo '<input type="text" id="button_label" name="do_esnb_options[button_label]" value="'. esc_attr( do_esnb_option( 'button_label' ) ) .'" />';			
+	echo '<div><code>'. __( 'Enter your button label.', 'do-esnb' ) .'</code></div>';
+
+}
+
+/**
+ * Button Link Callback
+ */		
+function do_esnb_field_button_link_cb() {
+	
+	echo '<input type="text" id="button_link" name="do_esnb_options[button_link]" value="'. esc_attr( do_esnb_option( 'button_link' ) ) .'" />';			
+	echo '<div><code>'. __( 'Enter your button link.', 'do-esnb' ) .'</code></div>';
 
 }

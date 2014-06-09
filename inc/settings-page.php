@@ -11,10 +11,10 @@
 		<div class="do-esnb-info-inside">
 			<ul>
 				<li>
-					<a href="http://designorbital.com/premium-wordpress-themes/" class="button button-primary" target="_blank"><?php _e( 'Premium WordPress Themes', 'do-esnb' ); ?></a>
+					<a href="http://designorbital.com/premium-wordpress-themes/?utm_source=wporg-esnb&utm_medium=button&utm_campaign=premium-wp-themes" class="button button-primary" target="_blank"><?php _e( 'Premium WordPress Themes', 'do-esnb' ); ?></a>
 				</li>
 				<li>
-					<a href="http://designorbital.com/free-wordpress-themes/" class="button" target="_blank"><?php _e( 'Free WordPress Themes', 'do-esnb' ); ?></a>
+					<a href="http://designorbital.com/free-wordpress-themes/?utm_source=wporg-esnb&utm_medium=button&utm_campaign=free-wp-themes" class="button" target="_blank"><?php _e( 'Free WordPress Themes', 'do-esnb' ); ?></a>
 				</li>
 				<li>
 					<a href="https://www.facebook.com/designorbital" class="button" target="_blank"><?php _e( 'Like Us On Facebook', 'do-esnb' ); ?></a>

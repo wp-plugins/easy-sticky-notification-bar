@@ -5,7 +5,8 @@
 2.0 - WSNB Wrapper
 3.0 - Refinement
 4.0 - Links
-5.0 - Media Queries
+5.0 - Button
+6.0 - Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -30,8 +31,9 @@
 	background: #ecebda;
 	border-bottom: 1px solid #ccc;
 	color: #000;
-	height: 32px;
-	padding: 5px 0 0;
+	height: 46px;
+	overflow: hidden;
+	padding: 0;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -39,12 +41,16 @@
 	width: 100%;
 	z-index: 99999;
 }
+.do-esnb-notification {
+	overflow: hidden;
+	padding: 8px 0 0;
+}
 
 /*--------------------------------------------------------------
 3.0 - Refinement
 --------------------------------------------------------------*/
 body.do-esnb {
-	margin-top: 32px !important;
+	margin-top: 46px !important;
 }
 body.admin-bar .do-esnb-wrapper {
 	top: 32px !important;
@@ -67,16 +73,39 @@ body.admin-bar .do-esnb-wrapper {
 }
 
 /*--------------------------------------------------------------
-5.0 Media Queries
+5.0 - Button
+--------------------------------------------------------------*/
+.do-esnb-wrapper a.do-esnb-button:link,
+.do-esnb-wrapper a.do-esnb-button:visited {
+	color: #fff;
+	display: inline-block;
+	background: #000;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0 5px;
+	padding: 6px 8px;
+	text-decoration: none;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+.do-esnb-wrapper a.do-esnb-button:hover,
+.do-esnb-wrapper a.do-esnb-button:focus,
+.do-esnb-wrapper a.do-esnb-button:active {
+	background: #666;
+}
+
+/*--------------------------------------------------------------
+6.0 Media Queries
 --------------------------------------------------------------*/
 /* Media Query is according to WordPress admin bar */
 @media screen and ( max-width: 782px ) {
 
 	/* WSNB Wrapper */
-	.do-esnb-wrapper {
+	/*.do-esnb-wrapper {
 		height: 46px;
 		padding: 12px 0 0;
-	}  
+	}*/ 
   
 	/* Refinement */
 	body.do-esnb {

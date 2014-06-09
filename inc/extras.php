@@ -24,8 +24,11 @@ function do_esnb_option_default( $option = 'logo' ) {
 
 	$do_esnb_options_default = array(
 		'enable'              => 0,
+		'display_button'      => 0,
 		'notification'        => 'Our free WordPress themes are elegant and easy to use',
 		'notification_link'   => 'http://designorbital.com/',
+		'button_label'        => 'Download',
+		'button_link'         => 'http://designorbital.com/',
 	);
 
 	if( isset( $do_esnb_options_default[$option] ) ) {
@@ -89,14 +92,26 @@ function do_esnb_init() {
 	<div class="do-esnb-inside">
 		
 		<div class="do-esnb-notification">
-			<?php if( '' == do_esnb_option( 'notification_link' ) ) : ?>
-				<?php echo esc_html( do_esnb_option( 'notification' ) ); ?>
-			<?php else: ?>
-				<a class="do-esnb-notification-link" href="<?php echo esc_url( do_esnb_option( 'notification_link' ) ); ?>">
+			
+			<?php if( '' != do_esnb_option( 'notification' ) ) : ?>
+				<?php if( '' == do_esnb_option( 'notification_link' ) ) : ?>
 					<?php echo esc_html( do_esnb_option( 'notification' ) ); ?>
-				</a>
+				<?php else: ?>
+					<a class="do-esnb-notification-link" href="<?php echo esc_url( do_esnb_option( 'notification_link' ) ); ?>">
+						<?php echo esc_html( do_esnb_option( 'notification' ) ); ?>
+					</a>
+				<?php endif; ?>
 			<?php endif; ?>
+			
+			<?php if( 1 == do_esnb_option( 'display_button' ) ) : ?>
+			<a class="do-esnb-button" href="<?php echo esc_url( do_esnb_option( 'button_link' ) ); ?>">
+				<?php echo esc_html( do_esnb_option( 'button_label' ) ); ?>
+			</a><!-- .do-esnb-button -->
+			<?php endif; ?>
+			
 		</div><!-- .do-esnb-notification -->
+		
+		
 		
 	</div><!-- .do-esnb-inside -->
 </div><!-- .do-esnb-wrapper -->

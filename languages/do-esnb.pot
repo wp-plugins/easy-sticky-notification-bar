@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Easy Sticky Notification Bar 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wordpress-importer\n"
-"POT-Creation-Date: 2014-06-05 22:49+0500\n"
-"PO-Revision-Date: 2014-06-05 22:49+0500\n"
+"POT-Creation-Date: 2014-06-09 19:11+0500\n"
+"PO-Revision-Date: 2014-06-09 19:11+0500\n"
 "Last-Translator: DesignOrbital <designorbital@live.com>\n"
 "Language-Team: DesignOrbital <designorbital@live.com>\n"
 "Language: en_US\n"
@@ -48,44 +48,68 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: inc/admin.php:109
-msgid "Notification Content"
+#: inc/admin.php:107
+msgid "Display Button"
 msgstr ""
 
 #: inc/admin.php:110
-msgid "Notification"
+msgid "Notification Content"
 msgstr ""
 
 #: inc/admin.php:111
+msgid "Notification"
+msgstr ""
+
+#: inc/admin.php:112
 msgid "Notification Link"
 msgstr ""
 
-#: inc/admin.php:123
+#: inc/admin.php:113
+msgid "Button Label"
+msgstr ""
+
+#: inc/admin.php:114
+msgid "Button Link"
+msgstr ""
+
+#: inc/admin.php:126
 msgid "yes"
 msgstr ""
 
-#: inc/admin.php:124
+#: inc/admin.php:127
 msgid "no"
 msgstr ""
 
-#: inc/admin.php:155
+#: inc/admin.php:173
 msgid "Configure notification bar by using the following settings."
 msgstr ""
 
-#: inc/admin.php:171
+#: inc/admin.php:189
 msgid "Select yes to enable notification bar"
 msgstr ""
 
-#: inc/admin.php:180
+#: inc/admin.php:205
+msgid "Select yes to display button"
+msgstr ""
+
+#: inc/admin.php:214
 msgid "Customize notification content by using the following settings."
 msgstr ""
 
-#: inc/admin.php:190
+#: inc/admin.php:224
 msgid "Enter your notification."
 msgstr ""
 
-#: inc/admin.php:200
+#: inc/admin.php:234
 msgid "Enter your notification link."
+msgstr ""
+
+#: inc/admin.php:244
+msgid "Enter your button label."
+msgstr ""
+
+#: inc/admin.php:254
+msgid "Enter your button link."
 msgstr ""
 
 #: inc/settings-page.php:6
