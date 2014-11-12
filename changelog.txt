@@ -1,7 +1,0 @@
-= 0.2 - June 09 2014 =
-
-* Call to Action button added.
-
-= 0.1 =
-
-* Initial release.

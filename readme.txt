@@ -36,6 +36,10 @@ Easy Sticky Notification Bar plugin is developed and maintained by DesignOrbital
 
 == Changelog ==
 
+= 0.2 - June 09, 2014 =
+
+* Enhancement: Call to Action button added.
+
 = 0.1 =
 
-* Initial release
+* Initial release.
