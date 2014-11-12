@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Clearings
+2.0 - WSNB Wrapper
+3.0 - Refinement
+4.0 - Links
+5.0 - Button
+6.0 - Media Queries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Clearings
+--------------------------------------------------------------*/
+.do-esnb-wrapper:before,
+.do-esnb-wrapper:after,
+.do-esnb-inside:before,
+.do-esnb-inside:after {
+  content: '';
+  display: table;
+}
+.do-esnb-wrapper:after,
+.do-esnb-inside:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+2.0 - WSNB Wrapper
+--------------------------------------------------------------*/
+.do-esnb-wrapper {
+	background: #ecebda;
+	border-bottom: 1px solid #ccc;
+	color: #000;
+	height: 46px;
+	overflow: hidden;
+	padding: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99999;
+}
+.do-esnb-notification {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	overflow: hidden;
+	padding: 8px 0 0;
+}
+
+/*--------------------------------------------------------------
+3.0 - Refinement
+--------------------------------------------------------------*/
+body.do-esnb {
+	margin-top: 46px !important;
+}
+body.admin-bar .do-esnb-wrapper {
+	top: 32px !important;
+}
+
+/*--------------------------------------------------------------
+4.0 - Links
+--------------------------------------------------------------*/
+.do-esnb-wrapper a.do-esnb-notification-link,
+.do-esnb-wrapper a.do-esnb-notification-link:visited {
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1;
+	text-decoration: none;
+}
+.do-esnb-wrapper a.do-esnb-notification-link:hover,
+.do-esnb-wrapper a.do-esnb-notification-link:focus,
+.do-esnb-wrapper a.do-esnb-notification-link:active {
+	color: #666;
+}
+
+/*--------------------------------------------------------------
+5.0 - Button
+--------------------------------------------------------------*/
+.do-esnb-wrapper a.do-esnb-button,
+.do-esnb-wrapper a.do-esnb-button:visited {
+	color: #fff;
+	display: inline-block;
+	background: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0 5px;
+	padding: 6px 8px;
+	text-decoration: none;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border-radius: 2px 2px 2px 2px;
+}
+.do-esnb-wrapper a.do-esnb-button:hover,
+.do-esnb-wrapper a.do-esnb-button:focus,
+.do-esnb-wrapper a.do-esnb-button:active {
+	background: #666;
+}
+
+/*--------------------------------------------------------------
+6.0 Media Queries
+--------------------------------------------------------------*/
+/* Media Query is according to WordPress admin bar */
+@media screen and ( max-width: 782px ) {
+
+	/* WSNB Wrapper */
+	/*.do-esnb-wrapper {
+		height: 46px;
+		padding: 12px 0 0;
+	}*/
+
+	/* Refinement */
+	body.do-esnb {
+		margin-top: 46px !important;
+	}
+	body.admin-bar .do-esnb-wrapper {
+		top: 46px !important;
+	}
+
+}
