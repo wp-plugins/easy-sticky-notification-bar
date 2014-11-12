@@ -7,7 +7,7 @@ Author: DesignOrbital.com
 Author URI: http://designorbital.com
 Text Domain: do-esnb
 Domain Path: /languages/
-Version: 0.2
+Version: 0.3
 License: GPL v3
 
 Easy Sticky Notification Bar
@@ -50,7 +50,7 @@ if ( !defined( 'DO_ESNB_URI' ) ) {
  * Load plugin textdomain.
  */
 function do_esnb_load_textdomain() {
-  load_plugin_textdomain( 'do-esnb', false, DO_ESNB_DIR_BASENAME. 'languages/' ); 
+  load_plugin_textdomain( 'do-esnb', false, DO_ESNB_DIR_BASENAME. 'languages/' );
 }
 add_action( 'plugins_loaded', 'do_esnb_load_textdomain' );
 
@@ -63,9 +63,26 @@ function do_esnb_scripts() {
 	 * Enqueue CSS files
 	 */
 
+	// Google Fonts
+	wp_enqueue_style( 'do-esnb-fonts', do_esnb_google_fonts_url(), array(), null );
+
 	// Plugin Stylesheet
 	if( 1 == do_esnb_option( 'enable' ) ) {
 		wp_enqueue_style( 'do-esnb-style', DO_ESNB_URI . 'css/style.css' );
+	}
+
+	// Plugin Fonts
+	$notification_font = do_esnb_option( 'notification_font' );
+	$button_font       = do_esnb_option( 'button_font' );
+
+	// Custom Inline Notification Font CSS
+	if( do_esnb_option_default( 'notification_font' ) != $notification_font ) {
+		wp_add_inline_style( 'do-esnb-style', do_esnb_notification_font() );
+	}
+
+	// Custom Inline Button Font CSS
+	if( do_esnb_option_default( 'button_font' ) != $button_font ) {
+		wp_add_inline_style( 'do-esnb-style', do_esnb_button_font() );
 	}
 
 }

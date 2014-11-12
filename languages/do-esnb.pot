@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy Sticky Notification Bar 0.1\n"
+"Project-Id-Version: Easy Sticky Notification Bar 0.3\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wordpress-importer\n"
-"POT-Creation-Date: 2014-06-09 19:11+0500\n"
-"PO-Revision-Date: 2014-06-09 19:11+0500\n"
+"POT-Creation-Date: 2014-11-12 23:02+0500\n"
+"PO-Revision-Date: 2014-11-12 23:02+0500\n"
 "Last-Translator: DesignOrbital <designorbital@live.com>\n"
 "Language-Team: DesignOrbital <designorbital@live.com>\n"
 "Language: en_US\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr\n"
 "X-Poedit-Basepath: /Applications/MAMP/htdocs/wpplugin/wp-content/plugins/"
 "easy-sticky-notification-bar/\n"
@@ -72,44 +72,73 @@ msgstr ""
 msgid "Button Link"
 msgstr ""
 
-#: inc/admin.php:126
+#: inc/admin.php:117 inc/settings-page.php:43
+msgid "Typography"
+msgstr ""
+
+#: inc/admin.php:118
+msgid "Notification Font"
+msgstr ""
+
+#: inc/admin.php:119
+msgid "Button Font"
+msgstr ""
+
+#: inc/admin.php:129
 msgid "yes"
 msgstr ""
 
-#: inc/admin.php:127
+#: inc/admin.php:130
 msgid "no"
 msgstr ""
 
-#: inc/admin.php:173
+#: inc/admin.php:290
 msgid "Configure notification bar by using the following settings."
 msgstr ""
 
-#: inc/admin.php:189
+#: inc/admin.php:306
 msgid "Select yes to enable notification bar"
 msgstr ""
 
-#: inc/admin.php:205
+#: inc/admin.php:322
 msgid "Select yes to display button"
 msgstr ""
 
-#: inc/admin.php:214
+#: inc/admin.php:331
 msgid "Customize notification content by using the following settings."
 msgstr ""
 
-#: inc/admin.php:224
+#: inc/admin.php:341
 msgid "Enter your notification."
 msgstr ""
 
-#: inc/admin.php:234
+#: inc/admin.php:351
 msgid "Enter your notification link."
 msgstr ""
 
-#: inc/admin.php:244
+#: inc/admin.php:361
 msgid "Enter your button label."
 msgstr ""
 
-#: inc/admin.php:254
+#: inc/admin.php:371
 msgid "Enter your button link."
+msgstr ""
+
+#: inc/admin.php:380
+msgid "Configure typography by using the following settings."
+msgstr ""
+
+#: inc/admin.php:396
+msgid "Select notification font."
+msgstr ""
+
+#: inc/admin.php:397 inc/admin.php:414
+#, php-format
+msgid "Default: %1$s"
+msgstr ""
+
+#: inc/admin.php:413
+msgid "Select button font."
 msgstr ""
 
 #: inc/settings-page.php:6
@@ -132,7 +161,7 @@ msgstr ""
 msgid "Follow On Twitter"
 msgstr ""
 
-#: inc/settings-page.php:35 inc/settings-page.php:56
+#: inc/settings-page.php:35 inc/settings-page.php:60
 msgid "Save Changes"
 msgstr ""
 
