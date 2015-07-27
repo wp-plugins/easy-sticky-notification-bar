@@ -3,8 +3,8 @@ Contributors: designorbital
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: sticky bar, notification bar, attention bar, fixed bar, top bar, sticky header, top sticky bar, top notification bar, notice, notification, plugin
-Requires at least: 3.8
-Tested up to: 4.0
+Requires at least: 4.0
+Tested up to: 4.2.3
 Stable tag: 0.3
 
 Add an elegant, responsive and clean sticky notification bar on the top of your WordPress site by using the Easy Sticky Notification Bar plugin.
